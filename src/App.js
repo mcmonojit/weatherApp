@@ -68,7 +68,7 @@ function App(){
     setPlaceData(placeUrlRes.data);
     // console.log(placeUrlRes.data);
 
-    const oneCallUrl = `http://api.openweathermap.org/data/2.5/onecall?lat=${placeUrlRes.data.coord.lat}&lon=${placeUrlRes.data.coord.lon}&appid=${appId}&units=${units}`;
+    const oneCallUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${placeUrlRes.data.coord.lat}&lon=${placeUrlRes.data.coord.lon}&appid=${appId}&units=${units}`;
 
     const oneCallUrlRes = await axios.get(oneCallUrl);
     setAllData(oneCallUrlRes.data);
